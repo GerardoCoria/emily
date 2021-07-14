@@ -1,0 +1,449 @@
+/*GENERAL*/
+/*$color-gris: #a89787;
+$color-blanco: #fffdf6;
+$color-negro: #1e1109;
+$color-marron: #cfb895;*/
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  margin:  0;
+}
+
+section {
+  background: #fffdf6;
+}
+
+h1 {
+  font-size: 4vh;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.barra-mobile{
+  background-color: #cfb895;
+  height: 40px;
+  z-index: 2;
+}
+
+.barra-mobile-caja{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color:  #cfb895CC;
+  transition: 2s;
+  top: -200px;
+  z-index: 1;
+}
+
+.barra-mobile-lista {
+  display: block;
+ 
+}
+
+.barra-mobile-lista:hover {
+  background:#a89787;
+}
+
+.barra-desktop {
+  display: none;
+ }
+
+
+
+.boton-mobile{
+  float: right;
+  font-size: 30px;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color:  #1e1109;
+}
+
+i {
+  margin: 5px;
+}
+
+.barra-mobile:hover > .barra-mobile-caja
+{
+top: 40px;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-areas:
+  "mapa contacto"
+  "footer-lista hecho";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 50% 50%;
+}
+
+.mapa-del-sitio {grid-area: mapa;
+                margin: 10px;}
+
+.footer-lista {
+  grid-area: footer-lista;
+  font-size: 2.5vh;
+  line-height: 2;
+  text-indent: 20px;
+}
+
+.contacto {grid-area: contacto;
+          margin: 10px;
+          font-size:3vh
+        }
+
+.hecho {grid-area: hecho;
+        margin: 10px;
+        font-size:3vh
+    }
+
+footer{
+  background: #cfb895 ;
+}
+
+/*INDEX*/
+
+.grid-index{
+  display: grid;
+  grid-template-areas:
+  "barra-mobile"
+  "section"
+  "footer";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+}
+
+.barra-mobile {grid-area: barra-mobile;}
+
+section {grid-area: section;}
+
+footer {grid-area: footer;}
+
+.inicio{
+        background-image: url(../media/linda.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+.titulo {
+  font-size: 7vh;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30vh;
+  text-shadow: 0 0 8px #000;
+}
+
+.post-titulo{
+  margin-top: 40vh;
+  font-size: 3vh;
+  color: black;
+  line-height: 2;
+  font-weight: bold;
+  margin: 30px;
+  text-shadow: 0 0 8px#fff;
+
+}
+
+/*QUIEN ES*/
+
+.grid-quien {
+  display: grid;
+  grid-template-areas:
+    "gata"
+    "amasar"
+    "fotogenica"
+    "oler-flores"
+    "obrera"
+    "zoom";
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+.gata {grid-area: gata;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 40px;
+}
+
+.amasar{grid-area:amasar;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 40px;}
+
+.fotogenica{grid-area:fotogenica;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 40px;}
+
+.oler-flores{grid-area:oler-flores;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 40px;}
+
+.obrera{grid-area: obrera;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 40px;}
+
+.zoom{grid-area:zoom;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 40px;}
+
+.textos::first-letter {
+  font-size: 3.5vh;
+  color: blue;
+  }
+
+#wikilink {color: #ff0000;}
+
+/*AMIGUITOS*/
+
+.grid-amiguitos {
+  display: grid;
+  grid-template-areas:
+    "h1"
+    "panterita"
+    "mielcita"
+    "gata-muda"
+    "gato-siames"
+    "moldes"
+    "encuesta";
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+h1 {grid-area: h1;}
+
+.panterita {
+  grid-area: panterita;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: 5px solid green;
+  border-radius: 20px;
+            }
+
+.mielcita {
+  grid-area: mielcita;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  border: 5px solid brown;
+  border-radius: 20px;
+          }
+
+.gata-muda {
+  grid-area: gata-muda;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: 5px solid black;
+  border-radius: 20px;
+          }
+
+.gato-siames {
+  grid-area: gato-siames;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: lightyellow;
+  color: brown;
+  border: 5px solid black;
+  border-radius: 20px
+            }
+
+.moldes {
+  grid-area: moldes;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: lightyellow;
+  color: brown;
+  border: 5px solid black;
+  border-radius: 20px
+        }
+
+.encuesta {
+  grid-area: encuesta;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: lightgreen;
+  border-radius: 20px;
+  line-height: 4vh;
+          }
+
+
+/*DONDE VIVE*/
+
+.donde-vive{
+  margin: 10px 20px;
+  line-height: 4vh;
+}
+
+/*GALERIA*/
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+
+.fotos-galeria{
+  width: 95%;
+  margin: 5px;
+  object-fit: cover;
+}
+
+/*VERSION DESKTOP*/
+
+@media only screen and (min-width: 768px) 
+{
+  h1 {
+    font-size: 5vw;
+  }
+
+  .titulo{
+    font-size: 7vw;
+  }
+
+  .barra-mobile {display: none;}
+
+  .barra-desktop{
+                  display:grid;
+                  grid-template-areas:
+                  "logo barra-desktop-lista-caja";
+                  grid-template-rows: auto;
+                  grid-template-columns: 20% 80%;
+                  width: 100%;
+                  height: auto;
+                  background-color:#cfb895;
+                  flex-direction: row;
+                  align-items: center;
+                }
+
+  .barra-desktop-lista-caja {grid-area: barra-desktop-lista-caja;
+                            display:flex;
+                            justify-content: flex-end;}
+
+  .logo {grid-area: logo;}
+
+  .barra-desktop-lista{
+      display: inline-block;
+      margin: 20px;
+      }
+
+  .grid-footer {
+    display: grid;
+    grid-template-areas:
+    "mapa footer-lista contacto hecho";
+    grid-template-rows: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 10px;
+      }
+  
+  .inicio{
+    background-position: 50% 20%;
+}
+  .grid-quien{
+    display: grid;
+    grid-template-areas:
+    "gata amasar"
+    "fotogenica oler-flores"
+    "obrera zoom";
+    grid-template-rows: auto;
+    grid-template-columns: 50%;
+}
+
+  .grid-quien img {
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+  }
+
+  .grid-amiguitos {
+    display: grid;
+    grid-template-areas:
+      "h1 h1"
+      "panterita mielcita"
+      "gata-muda gato-siames"
+      "moldes encuesta";
+    grid-template-rows: auto;
+    grid-template-columns: 50%;
+  }
+
+  .grid-amiguitos img {
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+  }
+
+  .encuesta{
+    line-height: 200%;
+  }
+
+  .donde-vive{
+    display: grid;
+    grid-template-areas:
+    "dv1 dv1"
+    "dv2 dv3";
+    grid-template-rows: auto;
+    grid-template-columns: 70% 30%;
+    grid-gap: 10px;
+  }
+
+  .dv1 {
+    grid-area: dv1;
+    margin-top: 10px;
+  }
+
+  .dv2 {grid-area: dv2;}
+
+  .dv3 {grid-area: dv3;
+    line-height: 250%;}
+
+
+
+
+  }
+
+

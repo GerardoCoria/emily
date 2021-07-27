@@ -84,8 +84,8 @@ top: 40px;
 .grid-footer {
   display: grid;
   grid-template-areas:
-  "mapa contacto"
-  "footer-lista hecho";
+    "mapa contacto"
+    "footer-lista hecho";
   grid-template-rows: auto auto auto;
   grid-template-columns: 50% 50%;
 }
@@ -111,7 +111,7 @@ top: 40px;
     }
 
 footer{
-  background: #cfb895 ;
+  background: #cfb895;
 }
 
 /*INDEX*/
@@ -351,7 +351,7 @@ h1 {grid-area: h1;}
   .barra-desktop{
                   display:grid;
                   grid-template-areas:
-                  "logo barra-desktop-lista-caja";
+                    "logo barra-desktop-lista-caja";
                   grid-template-rows: auto;
                   grid-template-columns: 20% 80%;
                   width: 100%;
@@ -361,9 +361,11 @@ h1 {grid-area: h1;}
                   align-items: center;
                 }
 
-  .barra-desktop-lista-caja {grid-area: barra-desktop-lista-caja;
+  .barra-desktop-lista-caja {
+                            grid-area: barra-desktop-lista-caja;
                             display:flex;
-                            justify-content: flex-end;}
+                            justify-content: flex-end;
+                            }
 
   .logo {grid-area: logo;}
 
@@ -379,7 +381,7 @@ h1 {grid-area: h1;}
     grid-template-rows: auto;
     grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 10px;
-      }
+    }
   
   .inicio{
     background-position: 50% 20%;
@@ -442,6 +444,9 @@ h1 {grid-area: h1;}
     line-height: 250%;}
 
 
+
+
+  }
 
 
   }

@@ -65,15 +65,29 @@ i
 }
 
 /* Menú desplegable */
-#barraMobileCaja
+.menuMobile
 {
-  display: none;
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   background-color:  #cfb895CC;
   top: 12vh;
   z-index: 999;
-  font-size: 6vw;
+  font-size: 6vw; */
+  animation-name: example;
+	animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* animation-direction: reverse; */
+}
+
+@keyframes example {
+
+  0% {display: none;}
+  100% {background-color: #cfb895df;
+    position: absolute;
+    width: 100%;
+    top: 12vh;
+    z-index: 999;
+    font-size: 6vw;}
 }
 
 #barraMobileCaja ul
@@ -275,6 +289,33 @@ footer
 }
 
 h1 {grid-area: h1;}
+
+.contenedor
+{
+  position: relative;
+}
+
+.botones
+{
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  font-size: 10vw;
+  background: gray;
+}
+
+.atras
+{
+  left: 2%;
+  top: calc(50% - 70px)
+}
+
+.adelante
+{
+  right: 2%;
+  top: calc(50% - 70px)
+}
+
 
 .panterita {
   grid-area: panterita;

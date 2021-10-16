@@ -96,12 +96,16 @@ i
   margin: 4vw 20vw;
 }
 
+.listaBarra
+{
+  margin: 4vw;
+}
+
 .listaBarra:hover
 {
   background:#a89787;
   
 }
-
 
 /* Barra desktop oculta */
 #barraDesktop 
@@ -118,7 +122,7 @@ footer
     "contacto"
     "volverArriba"
     "hechoPor";
-  grid-template-rows: repeat(3,6vh);
+  grid-template-rows: repeat(3,5vh);
   grid-template-columns: 100%;
   background: #cfb895;
   justify-items: center;
@@ -143,6 +147,10 @@ footer
 #volverArriba
 {
   grid-area: volverArriba;
+  border: none;
+  background: #cfb895;
+  color: green;
+  font-size: 3vh;
 }
 
 #hechoPor
@@ -198,10 +206,11 @@ footer
 }
 
 /*¿Quién es Emily?: Configuración del grid*/
-#quienEsEmily
+.quienEsEmily
 {
   display: grid;
   grid-template-areas:
+    "introQuienEs"
     "gata"
     "amasar"
     "fotogenica"
@@ -209,22 +218,35 @@ footer
     "obrera"
     "zoom"
     "profe"
-    "elecciones"
-    "footer";
+    "elecciones";
   grid-template-rows: auto;
   grid-template-columns: 100%;
-  margin: 0 5vw;
 }
 
-#quienEsEmily div
+.quienEsEmily div
 {
-  margin-bottom: 6vw;
+  margin-top: 3vw;
+  font-size: 4vw;
+}
+
+#introQuienEs
+{
+  grid-area: introQuienEs;
+  background-image: url(../media/linda2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 29%;
+  height: 23vw;
+  font-size: 11vw;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5vw #0c0202;
+  margin: 12vh 0 0 0 ;
+  text-align: center;
 }
 
 #gata 
 {
   grid-area: gata;
-  margin-top: 12vh;
 }
 
 #amasar
@@ -273,7 +295,7 @@ footer
   color: #ff0000;
 }
 
-/*Página de amiguitos*/
+/*Página de los michi amiguitos*/
 .gridAmiguitos
 {
   display: grid;
@@ -281,12 +303,33 @@ footer
     "tituloAmiguitos"
     "panterita"
     "mielcita"
-    "gata-muda"
-    "gato-siames"
+    "gataMuda"
+    "gatoSiames"
     "moldes"
-    "encuesta";
+    "mapa";
   grid-template-rows: auto;
   grid-template-columns: 100%;
+}
+
+.gridAmiguitos div
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  border-radius: 20px;
+  margin: 2vw;
+  padding: 2vw;
+}
+
+.gridAmiguitos h2
+{
+  font-size: 9vw;
+}
+
+.gridAmiguitos p
+{
+  font-size: 4.5vw;
 }
 
 #tituloAmiguitos 
@@ -294,6 +337,8 @@ footer
   grid-area: tituloAmiguitos;
   margin-top: 12vh;
   text-align: center;
+  font-size: 11vw;
+  padding: 1vw;
 }
 
 /* Carrusel de fotos */
@@ -313,13 +358,13 @@ footer
 .botones
 {
   position: absolute;
-  border-radius: 50%;
+  border-radius:  50% !important;
   width: 11vw;
-  height: 11vw;
+  height: 11vw !important;
   text-align: center;
   font-size: 9vw;
-  padding: 1vw 0;
-  background: #808080ed;
+  padding: 1vw 0 !important;
+  background: inherit;
   top: 40%;
 }
 
@@ -333,84 +378,83 @@ footer
   right: 2%;
 }
 
-#panterita {
+/* Configuración de cada card y carrusel */
+#panterita 
+{
   grid-area: panterita;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  margin: 10px 20px;
-  padding: 10px;
+  border: 5px solid green;
+}
+
+#panterita, #panterita .botones
+{
   background-color: black;
   color: white;
-  border: 5px solid green;
-  border-radius: 20px;
-            }
 
-#mielcita {
+}
+
+#mielcita 
+{
   grid-area: mielcita;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 20px;
-  padding: 10px;
+  border: 5px solid brown;
+}
+
+#mielcita, #mielcita .botones
+{
   background-color: orange;
   color: black;
-  border: 5px solid brown;
-  border-radius: 20px;
-          }
+}
 
-.gata-muda {
-  grid-area: gata-muda;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 20px;
-  padding: 10px;
+#gataMuda 
+{
+  grid-area: gataMuda;
+  border: 5px solid black;
+}
+
+#gataMuda, #gataMuda .botones
+{
   background-color: white;
   color: black;
-  border: 5px solid black;
-  border-radius: 20px;
-          }
+}
 
-.gato-siames {
-  grid-area: gato-siames;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 20px;
-  padding: 10px;
-  background-color: lightyellow;
-  color: brown;
+#gatoSiames 
+{
+  grid-area: gatoSiames;
   border: 5px solid black;
-  border-radius: 20px
-            }
+}
 
-.moldes {
+#gatoSiames, #gatoSiames .botones
+{
+  background-color: #ffffb5;
+  color: #804000;
+}
+
+#moldes 
+{
   grid-area: moldes;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 20px;
-  padding: 10px;
-  background-color: lightyellow;
-  color: brown;
-  border: 5px solid black;
-  border-radius: 20px
-        }
+  border: 5px solid #245312;
+}
 
-.encuesta {
-  grid-area: encuesta;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 10px 20px;
-  padding: 10px;
-  background-color: lightgreen;
+#moldes, #moldes .botones
+{
+  background-color: #929292;
+  color: #241313;
+}
+
+#mapa
+{
+  grid-area: mapa;
+  background-color: black;
+  color: white;
   border-radius: 20px;
-  line-height: 4vh;
-          }
+  height: 100vw;
+  font-size: 4.5vw;
+  text-align: center;
+}
 
+#mapa h3
+{
+  font-size: 6vw;
+}
 
 /*DONDE VIVE*/
 
@@ -436,10 +480,6 @@ footer
 
 @media only screen and (min-width: 768px) 
 {
-  /* h1 {
-    font-size: 5vw;
-  } */
-
   #titulo{
     font-size: 7vw;
   }
@@ -469,6 +509,7 @@ footer
     background-color:#cfb895;
     flex-direction: row;
     align-items: center;
+    z-index: 999;
   }
 
   #barraDesktopLista 
@@ -505,7 +546,7 @@ footer
     background-position: 50% 20%;
 }
   /* Página "quién es Emily" */
-  #quienEsEmily
+  .quienEsEmily
   {
     display: grid;
     grid-template-areas:
@@ -518,44 +559,84 @@ footer
     grid-template-columns: 40vw;
   }
 
-  #quienEsEmily div 
+  .quienEsEmily div 
   {
     display: grid;
     flex-direction: column;
   }
 
-  /* #quienEsEmily div div 
+  /* .quienEsEmily div div 
   {
 
   }
  */
 
-  #quienEsEmily img 
+  .quienEsEmily img 
   {
     /* height: 40vw;
     width: 50vw; */
     object-fit: cover;
   }
 
-  .gridAmiguitos {
+  .gridAmiguitos 
+  {
     display: grid;
     grid-template-areas:
-      "h1 h1"
+      "tituloAmiguitos tituloAmiguitos"
       "panterita mielcita"
-      "gata-muda gato-siames"
-      "moldes encuesta";
+      "gataMuda gatoSiames"
+      "moldes mapa";
     grid-template-rows: auto;
-    grid-template-columns: 50%;
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .gridAmiguitos img {
-    height: 250px;
-    width: 400px;
+  .contenedor img {
+    height: 25vw;
+    width: 40vw;
     object-fit: cover;
   }
 
-  .encuesta{
-    line-height: 200%;
+  .gridAmiguitos div
+  {
+    margin: 1vw;
+    padding: 0vw;
+  }
+
+  .gridAmiguitos h2
+  {
+    font-size: 4vw;
+  }
+
+  .gridAmiguitos p
+  {
+    font-size: 2vw;
+  }
+
+  .botones
+  {
+    border-radius: 50% !important;
+    width: 5vw;
+    height: 5vw !important;
+    text-align: center;
+    font-size: 3vw;
+    padding: 1vw 0 !important;
+    background: inherit;
+    top: 40%;
+  }
+
+  #tituloAmiguitos
+  {
+    font-size: 7vw;
+  }
+
+  #mapa
+  {
+    height: auto;
+  }
+
+  #mapa h3 
+  {
+    font-size: 3vw;
   }
 
   .donde-vive{
@@ -578,6 +659,18 @@ footer
   .dv3 {grid-area: dv3;
     line-height: 250%;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

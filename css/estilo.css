@@ -19,16 +19,6 @@ li
 {
   list-style: none;
 }
-/* 
-h1 {
-  font-size: 4vh;
-  text-align: center;
-}
-
-h2 {
-  font-size: 3vh;
-  text-align: center;
-} */
 
 /*Sección menú mobile*/
 #barraMobile
@@ -66,22 +56,32 @@ i
 }
 
 /* Menú desplegable */
-.menuMobile
-{
-  /* position: absolute;
-  width: 100%;
-  background-color:  #cfb895CC;
-  top: 12vh;
-  z-index: 999;
-  font-size: 6vw; */
-  animation-name: example;
+.ocultarMenu{
+  display: block;
+  animation-name: menuOculto;
 	animation-duration: 2s;
   animation-fill-mode: forwards;
-  /* animation-direction: reverse; */
 }
 
-@keyframes example {
+@keyframes menuOculto{
+  0% {display: none;}
+  100% {background-color: #cfb895df;
+    position: absolute;
+    width: 100%;
+    top: 12vh;
+    z-index: 999;
+    font-size: 6vw;}
 
+}
+
+.menuVisible{
+  display: none;
+  animation-name: verMenu;
+	animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes verMenu{
   0% {display: none;}
   100% {background-color: #cfb895df;
     position: absolute;
@@ -90,6 +90,16 @@ i
     z-index: 999;
     font-size: 6vw;}
 }
+
+
+
+/* #barraMobileCaja{
+  display: none;
+  position: absolute;
+  top: 18vh;
+  width: auto;
+  z-index: 999;
+} */
 
 #barraMobileCaja ul
 {

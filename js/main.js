@@ -1,10 +1,9 @@
 // Botón para abrir y cerrar el menú mobile 
-let btnMobile = document.getElementById("btnMobile");
-let menuLista = document.getElementById("barraMobileCaja");
-btnMobile.addEventListener("click", function()
-{
-    menuLista.classList.toggle("menuVisible");
-    menuLista.classList.toggle("ocultarMenu");
+let btnMobile = document.getElementById("btnMobile")
+let menuLista = document.getElementById("barraMobileCaja")
+btnMobile.addEventListener("click", function(){
+    menuLista.classList.toggle("menuVisible")
+    menuLista.classList.toggle("ocultarMenu")
 })
 // let menuMobile = document.getElementById("barraMobileCaja")
 // function mostrarMenu (){

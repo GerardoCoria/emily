@@ -28,7 +28,7 @@ li
   grid-area: barraMobile;
   background-color: #cfb895;
   width: 100%;
-  height: 12vh;
+  height: 15vh;
   align-items: center;
   z-index: 2;
 }
@@ -233,10 +233,10 @@ footer
   grid-template-columns: 100%;
 }
 
-.quienEsEmily div
-{
+.quienEsEmily div{
   margin-top: 3vw;
   font-size: 4vw;
+  background-color: #ffd9df;
 }
 
 #introQuienEs
@@ -245,13 +245,20 @@ footer
   background-image: url(../media/linda2.jpg);
   background-repeat: no-repeat;
   background-position: 50% 29%;
+  background-size: cover;
   height: 23vw;
   font-size: 11vw;
   color: white;
   font-weight: bold;
   text-shadow: 0 0 5vw #0c0202;
-  margin: 12vh 0 0 0 ;
+  margin: 15vh 0 0 0;
   text-align: center;
+}
+
+.quienEsEmily iframe
+{
+  width: 100%;
+  height: 100vw;
 }
 
 #gata 
@@ -294,14 +301,21 @@ footer
   grid-area: elecciones;
 }
 
+.textos{
+  font-size:4vh
+}
+
 .textos::first-letter
 {
-  font-size: 3.5vh;
+  font-size: 6vh;
   color: #2525be;
 }
 
-.wikilink
-{
+.wikilink{
+  color: #ff0000;
+}
+
+.wikilink:visited{
   color: #ff0000;
 }
 
@@ -515,7 +529,7 @@ footer
     grid-template-rows: auto;
     grid-template-columns: 20% 80%;
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     background-color:#cfb895;
     flex-direction: row;
     align-items: center;
@@ -532,14 +546,14 @@ footer
   .logo 
   {
     grid-area: logo;
-    width: 80%;
+    width: 100%;
   }
 
   .barraDesktopItems
   {
       display: inline-block;
       margin: 0 2vw;
-      font-size: 1.5vw;
+      font-size: 2vw;
   }
 
   /* Footer desktop */
@@ -560,32 +574,42 @@ footer
   {
     display: grid;
     grid-template-areas:
+      "introQuienEs introQuienEs"
       "gata amasar"
       "fotogenica oler-flores"
       "obrera zoom"
       "profe elecciones"
       "footer footer";
     grid-template-rows: auto;
-    grid-template-columns: 40vw;
+    grid-template-columns: 50vw
   }
 
   .quienEsEmily div 
   {
-    display: grid;
+    display: flex;
     flex-direction: column;
+    margin: 2vw;
   }
 
-  /* .quienEsEmily div div 
-  {
-
+  .quienEsEmily div div{
+    margin-bottom: 2vw;
   }
- */
 
   .quienEsEmily img 
   {
-    /* height: 40vw;
-    width: 50vw; */
     object-fit: cover;
+    height: 100%;
+  }
+
+  .quienEsEmily iframe
+  {
+    width: 100%;
+    height: 40vw;
+  }
+
+  #introQuienEs{
+    height: 16vw;
+    font-size: 8vw;
   }
 
   .gridAmiguitos 

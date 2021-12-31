@@ -5,41 +5,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Emily | Dónde vive</title>
 	<link rel="icon" href="../media/p.ico">
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">	
 	<script src="https://kit.fontawesome.com/62ea397d3a.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
 </head>
-<body class="grid-index">
-	<header id="arriba">
-		<nav class="barra-mobile">
-				<img src="../media/logo.png" width="100vw">
-				<div class="boton-mobile "><i class="fas fa-bars"></i></div>
-	<!--- ACA VA LA BARRA MOBILE --->	
-			<div class="barra-mobile-caja">
+<body>
+	<header>	
+		<!---Barra mobile --->	
+		<div id="barraMobile">
+			<!-- Logo y botón hamburguesa -->
+			<a href="../index.html">
+				<img src="../media/logo.png">
+			</a>
+			<button id="btnMobile"><i class="fas fa-bars"></i></button>
+			<!-- Menú mobile desplegable -->
+			<div id="barraMobileCaja" class="menuVisible">
 				<ul>
-				<li class="barra-mobile-lista"><a href="../index.html"><i class="fas fa-home"></i>Inicio</a></li>
-				<li class="barra-mobile-lista"><a href="quien-es.html"><i class="fas fa-fingerprint"></i>Quién es Emily</a></li>
-				<li class="barra-mobile-lista"><a href="amiguitos.html"><i class="fas fa-users"></i>Sus amiguitos</a></li>
-				<li class="barra-mobile-lista"><a href="donde.html"><i class="fas fa-map-marker-alt"></i>Dónde vive</a></li>
-				<li class="barra-mobile-lista"><a href="galeria.html"><i class="fas fa-photo-video"></i>Galería</a></li>
-			</ul>
+					<li class="listaBarra"><a href="../index.html"><i class="fas fa-home"></i>Inicio</a></li>
+					<li class="listaBarra"><a href="quien-es.html"><i class="fas fa-fingerprint"></i>Quién es Emily</a></li>
+					<li class="listaBarra"><a href="amiguitos.html"><i class="fas fa-users"></i>Sus amiguitos</a></li>
+					<li class="listaBarra"><a href="galeria.html"><i class="fas fa-photo-video"></i>Galería</a></li>
+				</ul>
 			</div>
-		</nav>
-		<!--- ACA VA LA BARRA DESKTOP --->		
-		<div class="barra-desktop">
-			<img src="../media/logo.png" width="150vw" class="logo">
-			<ul class="barra-desktop-lista-caja">
-				<li class="barra-desktop-lista"><a href="../index.html"><i class="fas fa-home"></i>Inicio</a></li>
-				<li class="barra-desktop-lista"><a href="quien-es.html"><i class="fas fa-fingerprint"></i>Quién es Emily</a></li>
-				<li class="barra-desktop-lista"><a href="amiguitos.html"><i class="fas fa-users"></i>Sus amiguitos</a></li>
-				<li class="barra-desktop-lista"><a href="donde.html"><i class="fas fa-map-marker-alt"></i>Dónde vive</a></li>
-				<li class="barra-desktop-lista"><a href="galeria.html"><i class="fas fa-photo-video"></i>Galería</a></li>
+		</div>
+		<!---Barra desktop --->		
+		<div id="barraDesktop">
+			<!-- Logo -->
+			<a href="../index.html">
+				<img src="../media/logo.png" class="logo">
+			</a>
+			<!-- Nav del menú desktop -->
+			<ul id="barraDesktopLista">
+				<li class="barraDesktopItems"><a href="../index.html"><i class="fas fa-home"></i>Inicio</a></li>
+				<li class="barraDesktopItems"><a href="quien-es.html"><i class="fas fa-fingerprint"></i>Quién es Emily</a></li>
+				<li class="barraDesktopItems"><a href="amiguitos.html"><i class="fas fa-users"></i>Sus amiguitos</a></li>
+				<li class="barraDesktopItems"><a href="galeria.html"><i class="fas fa-photo-video"></i>Galería</a></li>
 			</ul>
 		</div>
 	</header>
 
-	<section class="grid-galeria">
+	<section id="grid-galeria">
 		<img src="../media/espada.jpg" alt="" class="fotos-galeria">
 		<img src="../media/mate.jpg" alt="" class="fotos-galeria">
 		<img src="../media/zzz.jpg" alt="" class="fotos-galeria">
@@ -52,33 +56,21 @@
 		<img src="../media/tdfw.jpg" alt="" class="fotos-galeria">
 		<img src="../media/flauta.jpg" alt="" class="fotos-galeria">		
 		<img src="../media/ups.png" alt="" class="fotos-galeria">
-
-
 	</section>
 	
-	<footer class="grid-footer">
-		<div class="mapa-del-sitio">
-			<span style="font-size:3vh">Mapa del sitio:</span>
+	<!-- Pie de página -->
+	<footer>
+		<div id="contacto">
+			<a href="https://wa.link/mqz5y" target="_blank"><img src="../media/wa.png"></a>
+			Contacto
+		</div>
+		<button id="volverArriba"><i class="fas fa-chevron-up"></i>Volver arriba</button>
+		<div id="hechoPor">
+			<span>&copy; Hecho por</span>
+			<img src="../media/logogac.svg" width="70px">
 		</div>	
-		<div class="footer-lista">
-			<ul>
-				<li><a href="../index.html">Inicio</a></li>
-				<li><a href="quien-es.html">Quién es Emily</a></li>
-				<li><a href="amiguitos.html">Sus amiguitos</a></li>
-				<li><a href="donde.html">Dónde vive</a></li>
-				<li><a href="galeria.html">Galería</a></li>
-			</ul>
-		</div>
-		<div class="contacto">Contacto:<br>
-			<a href="https://wa.link/mqz5y" target="_blank"><img src="../media/wa.png" width="10%"></a>
-		</div>
-		<div class="hecho">
-			<span>
-				<a href="#arriba" style="color:#009900";>Volver arriba</a><br><br>
-			</span>
-			<span style="font-size: 2.5vh";>Hecho por </span><br>
-			<img src="../media/logogac.png" width="70px">
-		</div>
 	</footer>
+	<!-- Enlace de JS -->
+	<script src="../js/main.js"></script>
 </body>
 </html>

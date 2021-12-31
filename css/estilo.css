@@ -359,7 +359,7 @@ footer
 #tituloAmiguitos 
 {
   grid-area: tituloAmiguitos;
-  margin-top: 12vh;
+  margin-top: 15vh;
   text-align: center;
   font-size: 11vw;
   padding: 1vw;
@@ -489,15 +489,17 @@ footer
 
 /*GALERIA*/
 
-.grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+#grid-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fill, minmax(400px,1fr)); */
+  padding-top:25vw;
 }
 
 .fotos-galeria{
-  width: 95%;
-  margin: 5px;
-  object-fit: cover;
+  width: 90vw;
+  margin: 0 5vw 5vw;
+  /* object-fit: cover; */
 }
 
 /*Medias Query: configuraciones de la versión desktop*/
@@ -673,47 +675,17 @@ footer
     font-size: 3vw;
   }
 
-  .donde-vive{
-    display: grid;
-    grid-template-areas:
-    "dv1 dv1"
-    "dv2 dv3";
-    grid-template-rows: auto;
-    grid-template-columns: 70% 30%;
-    grid-gap: 10px;
+  /*GALERIA*/
+  #grid-galeria {
+    display: flex;
+    padding-top: 10vw;
+    justify-content: center;
+    align-items: flex-start;
   }
 
-  .dv1 {
-    grid-area: dv1;
-    margin-top: 10px;
+  .fotos-galeria{
+    margin: 2vw;
+    object-fit: contain;
+    max-width: 29vw;
   }
-
-  .dv2 {grid-area: dv2;}
-
-  .dv3 {grid-area: dv3;
-    line-height: 250%;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

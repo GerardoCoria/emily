@@ -1,0 +1,691 @@
+/*Configuraciones generales para toda la página*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* 
+{
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, a:visited 
+{
+  text-decoration: none;
+  color:  #1e1109;
+}
+
+li
+{
+  list-style: none;
+}
+
+/*Sección menú mobile*/
+#barraMobile
+{
+  display: flex;
+  position:fixed;
+  grid-area: barraMobile;
+  background-color: #cfb895;
+  width: 100%;
+  height: 15vh;
+  align-items: center;
+  z-index: 2;
+}
+
+#barraMobile img
+{
+  width: 36vw;
+  align-self: center;
+  margin: 0 24vw;
+}
+
+/*Botón hamburguesa del menú mobile*/
+#btnMobile
+{
+  float: right;
+  font-size: 10vw;
+  background: #cfb895;
+  border: none;
+  margin-right: 3vw;
+}
+
+i 
+{
+  margin: 1vw;
+}
+
+/* Menú desplegable */
+.ocultarMenu{
+  display: block;
+  animation-name: menuOculto;
+	animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menuOculto{
+  0% {display: none;}
+  100% {background-color: #cfb895df;
+    position: absolute;
+    width: 100%;
+    top: 12vh;
+    z-index: 999;
+    font-size: 6vw;}
+
+}
+
+.menuVisible{
+  display: none;
+  animation-name: verMenu;
+	animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes verMenu{
+  0% {display: none;}
+  100% {background-color: #cfb895df;
+    position: absolute;
+    width: 100%;
+    top: 12vh;
+    z-index: 999;
+    font-size: 6vw;}
+}
+
+
+
+/* #barraMobileCaja{
+  display: none;
+  position: absolute;
+  top: 18vh;
+  width: auto;
+  z-index: 999;
+} */
+
+#barraMobileCaja ul
+{
+  margin: 4vw 20vw;
+}
+
+.listaBarra
+{
+  margin: 4vw;
+}
+
+.listaBarra:hover
+{
+  background:#a89787;
+  
+}
+
+/* Barra desktop oculta */
+#barraDesktop 
+{
+  display: none;
+}
+
+/* Pie de página (footer) */
+footer 
+{
+  display: grid;
+  grid-area: footer;
+  grid-template-areas:
+    "contacto"
+    "volverArriba"
+    "hechoPor";
+  grid-template-rows: repeat(3,5vh);
+  grid-template-columns: 100%;
+  background: #cfb895;
+  justify-items: center;
+  align-items: center;
+  font-size: 3vh;
+}
+
+#contacto
+{
+  display: flex;
+  grid-area: contacto;
+  align-content: center;
+  align-items: center;
+}
+
+#contacto img
+{
+  width: 4vh;
+  margin: 1vh;
+}
+
+#volverArriba
+{
+  grid-area: volverArriba;
+  border: none;
+  background: #cfb895;
+  color: green;
+  font-size: 3vh;
+}
+
+#hechoPor
+{
+  display: flex;
+  grid-area: hechoPor;
+  align-content: center;
+  align-items: center;
+}
+
+/*Index: configuración del grid*/
+#gridIndex
+{
+  display: grid;
+  grid-template-areas:
+    "barraMobile"
+    "inicio"
+    "footer";
+  grid-template-rows: auto 90vh auto;
+  grid-template-columns: 100%;
+}
+
+#inicio
+{
+  margin-top: 12vh;
+  grid-area: inicio;
+  background-image: url(../media/linda.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#titulo 
+{
+  font-size: 7vh;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20vh;
+  text-shadow: 0 0 8px #000;
+}
+
+#subTitulo
+{
+  margin-top: 40vh;
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+  line-height: 2;
+  font-weight: bold;
+  margin: 30px;
+  text-shadow: 0 0 8px#fff;
+}
+
+/*¿Quién es Emily?: Configuración del grid*/
+.quienEsEmily
+{
+  display: grid;
+  grid-template-areas:
+    "introQuienEs"
+    "gata"
+    "amasar"
+    "fotogenica"
+    "oler-flores"
+    "obrera"
+    "zoom"
+    "profe"
+    "elecciones";
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+.quienEsEmily div{
+  margin-top: 3vw;
+  font-size: 4vw;
+  background-color: #ffd9df;
+}
+
+#introQuienEs
+{
+  grid-area: introQuienEs;
+  background-image: url(../media/linda2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 29%;
+  background-size: cover;
+  height: 23vw;
+  font-size: 11vw;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5vw #0c0202;
+  margin: 15vh 0 0 0;
+  text-align: center;
+}
+
+.quienEsEmily iframe
+{
+  width: 100%;
+  height: 100vw;
+}
+
+#gata 
+{
+  grid-area: gata;
+}
+
+#amasar
+{
+  grid-area:amasar;
+}
+
+#fotogenica
+{
+  grid-area:fotogenica;
+}
+
+#oler-flores
+{
+  grid-area:oler-flores;
+}
+
+#obrera
+{
+  grid-area: obrera;
+}
+
+#zoom
+{
+  grid-area:zoom;
+}
+
+#profe
+{
+  grid-area: profe;
+}
+
+#elecciones
+{
+  grid-area: elecciones;
+}
+
+.textos{
+  font-size:4vh
+}
+
+.textos::first-letter
+{
+  font-size: 6vh;
+  color: #2525be;
+}
+
+.wikilink{
+  color: #ff0000;
+}
+
+.wikilink:visited{
+  color: #ff0000;
+}
+
+/*Página de los michi amiguitos*/
+.gridAmiguitos
+{
+  display: grid;
+  grid-template-areas:
+    "tituloAmiguitos"
+    "panterita"
+    "mielcita"
+    "gataMuda"
+    "gatoSiames"
+    "moldes"
+    "mapa";
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+.gridAmiguitos div
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  border-radius: 20px;
+  margin: 2vw;
+  padding: 2vw;
+}
+
+.gridAmiguitos h2
+{
+  font-size: 9vw;
+}
+
+.gridAmiguitos p
+{
+  font-size: 4.5vw;
+}
+
+#tituloAmiguitos 
+{
+  grid-area: tituloAmiguitos;
+  margin-top: 15vh;
+  text-align: center;
+  font-size: 11vw;
+  padding: 1vw;
+}
+
+/* Carrusel de fotos */
+.contenedor
+{
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor img
+{
+  object-fit: cover;
+  width: 80vw;
+  height: 60vw;
+}
+
+.botones
+{
+  position: absolute;
+  border-radius:  50% !important;
+  width: 11vw;
+  height: 11vw !important;
+  text-align: center;
+  font-size: 9vw;
+  padding: 1vw 0 !important;
+  background: inherit;
+  top: 40%;
+}
+
+.atras
+{
+  left: 2%;
+}
+
+.adelante
+{
+  right: 2%;
+}
+
+/* Configuración de cada card y carrusel */
+#panterita 
+{
+  grid-area: panterita;
+  border: 5px solid green;
+}
+
+#panterita, #panterita .botones
+{
+  background-color: black;
+  color: white;
+
+}
+
+#mielcita 
+{
+  grid-area: mielcita;
+  border: 5px solid brown;
+}
+
+#mielcita, #mielcita .botones
+{
+  background-color: orange;
+  color: black;
+}
+
+#gataMuda 
+{
+  grid-area: gataMuda;
+  border: 5px solid black;
+}
+
+#gataMuda, #gataMuda .botones
+{
+  background-color: white;
+  color: black;
+}
+
+#gatoSiames 
+{
+  grid-area: gatoSiames;
+  border: 5px solid black;
+}
+
+#gatoSiames, #gatoSiames .botones
+{
+  background-color: #ffffb5;
+  color: #804000;
+}
+
+#moldes 
+{
+  grid-area: moldes;
+  border: 5px solid #245312;
+}
+
+#moldes, #moldes .botones
+{
+  background-color: #929292;
+  color: #241313;
+}
+
+#mapa
+{
+  grid-area: mapa;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 100vw;
+  font-size: 4.5vw;
+  text-align: center;
+}
+
+#mapa h3
+{
+  font-size: 6vw;
+}
+
+/*DONDE VIVE*/
+
+.donde-vive{
+  margin: 10px 20px;
+  line-height: 4vh;
+}
+
+/*GALERIA*/
+
+#grid-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fill, minmax(400px,1fr)); */
+  padding-top:25vw;
+}
+
+.fotos-galeria{
+  width: 90vw;
+  margin: 0 5vw 5vw;
+  /* object-fit: cover; */
+}
+
+/*Medias Query: configuraciones de la versión desktop*/
+
+@media only screen and (min-width: 768px) 
+{
+  #titulo{
+    font-size: 7vw;
+  }
+
+  #subTitulo
+  {
+    font-size: 4vh;
+  }
+
+  /* Barra mobile oculta */
+  #barraMobile
+  {
+    display: none;
+  }
+
+  /* Barra desktop visible */
+  #barraDesktop
+  {
+    position: fixed;
+    display:grid;
+    grid-template-areas:
+      "logo barraDesktopLista";
+    grid-template-rows: auto;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+    height: 15vh;
+    background-color:#cfb895;
+    flex-direction: row;
+    align-items: center;
+    z-index: 999;
+  }
+
+  #barraDesktopLista 
+  {
+    grid-area: barraDesktopLista;
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .logo 
+  {
+    grid-area: logo;
+    width: 100%;
+  }
+
+  .barraDesktopItems
+  {
+      display: inline-block;
+      margin: 0 2vw;
+      font-size: 2vw;
+  }
+
+  /* Footer desktop */
+  footer 
+  {
+    height: 12vh;
+    grid-template-areas:
+    "contacto volverArriba hechoPor";
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  #inicio{
+    background-position: 50% 20%;
+}
+  /* Página "quién es Emily" */
+  .quienEsEmily
+  {
+    display: grid;
+    grid-template-areas:
+      "introQuienEs introQuienEs"
+      "gata amasar"
+      "fotogenica oler-flores"
+      "obrera zoom"
+      "profe elecciones"
+      "footer footer";
+    grid-template-rows: auto;
+    grid-template-columns: 50vw
+  }
+
+  .quienEsEmily div 
+  {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+  }
+
+  .quienEsEmily div div{
+    margin-bottom: 2vw;
+  }
+
+  .quienEsEmily img 
+  {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .quienEsEmily iframe
+  {
+    width: 100%;
+    height: 40vw;
+  }
+
+  #introQuienEs{
+    height: 16vw;
+    font-size: 8vw;
+  }
+
+  .gridAmiguitos 
+  {
+    display: grid;
+    grid-template-areas:
+      "tituloAmiguitos tituloAmiguitos"
+      "panterita mielcita"
+      "gataMuda gatoSiames"
+      "moldes mapa";
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .contenedor img {
+    height: 25vw;
+    width: 40vw;
+    object-fit: cover;
+  }
+
+  .gridAmiguitos div
+  {
+    margin: 1vw;
+    padding: 0vw;
+  }
+
+  .gridAmiguitos h2
+  {
+    font-size: 4vw;
+  }
+
+  .gridAmiguitos p
+  {
+    font-size: 2vw;
+  }
+
+  .botones
+  {
+    border-radius: 50% !important;
+    width: 5vw;
+    height: 5vw !important;
+    text-align: center;
+    font-size: 3vw;
+    padding: 1vw 0 !important;
+    background: inherit;
+    top: 40%;
+  }
+
+  #tituloAmiguitos
+  {
+    font-size: 7vw;
+  }
+
+  #mapa
+  {
+    height: auto;
+  }
+
+  #mapa h3 
+  {
+    font-size: 3vw;
+  }
+
+  /*GALERIA*/
+  #grid-galeria {
+    display: flex;
+    padding-top: 10vw;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .fotos-galeria{
+    margin: 2vw;
+    object-fit: contain;
+    max-width: 29vw;
+  }
+}

@@ -512,7 +512,7 @@ footer
 
   #subTitulo
   {
-    font-size: 4vh;
+    font-size: 1.3vw;
   }
 
   /* Barra mobile oculta */
@@ -548,26 +548,31 @@ footer
   .logo 
   {
     grid-area: logo;
-    width: 100%;
+    width: 90%;
+    margin-left: 4vw;
   }
 
   .barraDesktopItems
   {
       display: inline-block;
       margin: 0 2vw;
-      font-size: 2vw;
+      font-size: 1.3vw;
   }
 
   /* Footer desktop */
-  footer 
-  {
+  footer {
     height: 12vh;
     grid-template-areas:
     "contacto volverArriba hechoPor";
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
+    font-size: 1.3vw;
   }
   
+  #volverArriba{
+    font-size: 1.3vw;
+  }
+
   #inicio{
     background-position: 50% 20%;
 }
